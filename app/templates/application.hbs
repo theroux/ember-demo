@@ -1,3 +1,24 @@
-<h2 id="title">Welcome to Ember</h2>
+<div class="ui container">
+<h2>Welcome to Ember.js</h2>
 
 {{outlet}}
+
+<ul class="messages">
+{{#each model as |message|}}
+  <li class="message">
+    <div class="message--avatar"><img src="{{message.pic}}" /></div>
+
+    <div class="message--data">
+      <div class="message--text">{{message.message}}</div>
+
+      <div class="message--user">{{message.firstName}}  {{message.lastName}}</div>
+
+      <div class="message--agent">{{message.useragent}}</div>
+
+      <div class="message--datetime">{{message.date}}</div>
+    </div>
+
+  </li>
+{{/each}}
+</ul>
+</div>

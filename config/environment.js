@@ -2,6 +2,12 @@
 
 module.exports = function(environment) {
   var ENV = {
+    contentSecurityPolicy: {
+  	  'connect-src': "'self' *",
+      'font-src': "'self' * data:",
+      'style-src': "'self' *",
+      'img-src': "'self' *"
+  	},
     modulePrefix: 'mariana',
     environment: environment,
     baseURL: '/',
